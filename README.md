@@ -14,4 +14,4 @@ This repo will be used to stage GIS data, project files, source code for custom 
 documentation.  
 
 Project mgmt (communication and disucssions with the client, todo lists, ...) is maintained in
-[Basecamp] (https://basecamp.com/2118492/projects/13719085)
+[Basecamp](https://basecamp.com/2118492/projects/13719085)
