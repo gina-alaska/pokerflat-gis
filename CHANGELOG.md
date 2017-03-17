@@ -14,3 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 2016-03-15 Added ArcGIS ArcMap project dir mxd/
 - 2016-03-15 Added ancillary data dir 
 
+- 2016-03-16 Renamed aprx/ to arcpro/
+- 2016-03-16 Renamed mxd/ to arcmap
+- 2016-03-16 Added qgis/ and QGIS project
+
