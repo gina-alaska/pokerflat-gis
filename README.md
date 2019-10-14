@@ -39,3 +39,23 @@ documentation.
   5.  The output from intersecting the Alaska Fire Service (AFS) Known Sites layer with the 3σ circle
 - Output feature classes will be stored in a file geodatabase located in C:\gina\poker\gdb\ named <Mission Name>.gdb
   
+  #  Contact information
+  For questions about these data or this project, please contact 
+  John Pace - Director
+  Geographic Information Network of Alaska
+  University of Alaska Fairbanks - Geophysical Institute
+  2156 North Koyukuk Drive - Elvey 201
+  Fairbanks, AK  99775
+  (907) 474-6897
+  jpace6@alaska.edu
+  
+  or
+  
+  Peter Hickman - GIS Project Manager
+  Geographic Information Network of Alaska
+  University of Alaska Fairbanks - Geophysical Institute
+  2156 North Koyukuk Drive - Elvey 201
+  Fairbanks, AK  99775
+  (907) 474-1567
+  pjhickman@alaska.edu
+  
