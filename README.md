@@ -41,15 +41,16 @@ documentation.
   
 #  Contact information
 For questions about these data or this project, please contact 
+```
 John Pace - DirectorGeographic Information Network of Alaska
 University of Alaska Fairbanks - Geophysical Institute
 2156 North Koyukuk Drive - Elvey 201
 Fairbanks, AK  99775
 (907) 474-6897
 jpace6@alaska.edu
-
+```
 or
-
+```
 Peter Hickman - GIS Project Manager
 Geographic Information Network of Alaska
 University of Alaska Fairbanks - Geophysical Institute
@@ -57,3 +58,4 @@ University of Alaska Fairbanks - Geophysical Institute
 Fairbanks, AK  99775
 (907) 474-1567
 pjhickman@alaska.edu
+```
