@@ -15,7 +15,8 @@ documentation.
 
 # Build notes
 - Current build is in ArcGIS Desktop version 10.6.  You must have ArcGIS Desktop to use the PFRR toolbox (ArcGIS Pro version is planned).
-- To install, download and unpackage (unzip) the directory stucture found in file gina.zip onto directly to the C:\ drive on a Windows PC. 
+- To install, download and unpackage (unzip) the directory stucture found in file gina.zip onto directly to the C:\ drive on a Windows PC
+  - https://github.com/gina-alaska/pokerflat-gis/blob/master/release/
 - The current release project file is located in C:\gina\poker\mxd\<filename>.mxd
 - After the project file has been loaded into ArcMap, locate the PFRR Tools toolbox in the ArcToolbox window.
   - Note: if the PFRR Tools toolbox is not located in the ArcToolbox window, right-click and add the file from the directory below to your ArcToolbox window: 
