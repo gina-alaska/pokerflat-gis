@@ -1,4 +1,4 @@
-# pokerflat-gis
+# Project Description
 Poker Flat Research Rocket Range GIS, Data Management and Decision Support
 
 Poker Flat Research Rocket Range has asked GINA to build an interactive GIS (optionally web-based)
