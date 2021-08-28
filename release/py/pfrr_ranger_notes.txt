@@ -1,0 +1,55 @@
+-143.871634  69.035284 Decimal Degrees
+
+-145.789778  68.005578 Decimal Degrees
+
+-146.853408  67.910889 Decimal Degrees
+
+-147.476599  65.131031 Decimal Degrees
+
+-148.480679  68.180358 Decimal Degrees
+
+-149.906682  67.264536 Decimal Degrees
+
+Executing: workdir22 -145.789778 68.005578 "4 Miles"
+Start Time: Wed Sep 27 16:37:11 2017
+Executing (Calculate Lon Field): CalculateField E:\gina\poker\dbf\predicted_impact_xy.dbf Lon -145.789778 PYTHON #
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:11 2017 (Elapsed Time: 0.01 seconds)
+Executing (Calculate Lat Field): CalculateField E:\gina\poker\dbf\predicted_impact_xy.dbf Lat 68.005578 PYTHON #
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:11 2017 (Elapsed Time: 0.01 seconds)
+Executing (Make XY Event Layer): MakeXYEventLayer E:\gina\poker\dbf\predicted_impact_xy.dbf lon lat predicted_impact_xy_Layer "GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]];-400 -400 1000000000;-100000 10000;-100000 10000;8.98315284119522E-09;0.001;0.001;IsHighPrecision" #
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:11 2017 (Elapsed Time: 0.01 seconds)
+Executing (Copy Features): CopyFeatures predicted_impact_xy_Layer E:\gina\poker\pip\pip_point.shp # 0 0 0
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:11 2017 (Elapsed Time: 0.17 seconds)
+Executing (Feature Class to Feature Class): FeatureClassToFeatureClass E:\gina\poker\pip\pip_point.shp E:\gina\poker\pip pip_xy_point.shp # "Lon "Lon" true true false 19 Double 0 0 ,First,#,E:\gina\poker\pip\pip_point.shp,Lon,-1,-1;Lat "Lat" true true false 19 Double 0 0 ,First,#,E:\gina\poker\pip\pip_point.shp,Lat,-1,-1" #
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:11 2017 (Elapsed Time: 0.19 seconds)
+Executing (Buffer): Buffer E:\gina\poker\pip\pip_xy_point.shp E:\gina\poker\pip\pip_buffer.shp "4 Miles" FULL ROUND NONE # PLANAR
+Start Time: Wed Sep 27 16:37:11 2017
+Succeeded at Wed Sep 27 16:37:12 2017 (Elapsed Time: 0.28 seconds)
+Executing (Intersect): Intersect "E:\gina\poker\pip\pip_buffer.shp #;E:\gina\poker\shp\wip\adnr_gls_dls_merge_20170823_v1.shp #" E:\gina\poker\pip\pip_buffer_intersect_land_ownership.shp ALL # INPUT
+Start Time: Wed Sep 27 16:37:12 2017
+Reading Features...
+Cracking Features...
+Assembling Features...
+Succeeded at Wed Sep 27 16:37:12 2017 (Elapsed Time: 0.27 seconds)
+Succeeded at Wed Sep 27 16:37:12 2017 (Elapsed Time: 1.43 seconds)
+
+
+def __init__(self):         
+	self.label = "Add Layer"         
+	self.description = "Adds a layer to ArcMap"         
+	self.canRunInBackground = False 
+
+def execute(self, parameters, messages):         
+	arcpy.MakeFeatureLayer_management("C:\BILL\CB_TEMP\cb.shp", "LAYER")         
+	mxd = arcpy.mapping.MapDocument("CURRENT")         
+	df  = arcpy.mapping.ListDataFrames(mxd, "*")[0]         
+	addLayer = arcpy.mapping.Layer("LAYER")         
+	arcpy.mapping.AddLayer(df, addLayer, "TOP")           
+	arcpy.RefreshTOC()         
+	arcpy.RefreshActiveView()         
+	# del mxd  
